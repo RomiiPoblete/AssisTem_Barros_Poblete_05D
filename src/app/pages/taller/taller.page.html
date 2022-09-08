@@ -1,0 +1,69 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button (click)="mostrarMenu()">
+        <ion-icon slot="start" name="menu-outline" color="tertiary"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Taller</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+
+    <ion-card-header>
+      <ion-card-subtitle class="subtaller">Peliculas Studio Ghibli</ion-card-subtitle>
+      <ion-card-title class="titulotaller">Howl's Moving Castle</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <p class="parrafotaller">
+        Después de que una bruja la transforma en una anciana, una fabricante de sombreros busca refugio en la casa ambulante de un singular mago.
+      </p>
+    </ion-card-content>
+
+    <ion-card>
+      <img src="assets/Castillo.jpg" class="ion-padding">
+    </ion-card>
+
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle class="subtalle2r">Prueba botones</ion-card-subtitle>
+      <ion-card-title class="titulotaller2">Botones Aleatorios</ion-card-title>
+    </ion-card-header>
+
+    <ion-item href="#">
+      <ion-icon slot="start" name="navigate" color="warning"></ion-icon>   
+      <ion-label>Inicio</ion-label>
+      <ion-button fill="outline" slot="end" routerLink="/inicio">
+        Ir
+      </ion-button>
+    </ion-item>
+
+    <ion-item href="#">
+      <ion-icon slot="start" name="dice"></ion-icon>
+      <ion-label class="dice">Dado</ion-label>
+    </ion-item>
+  
+    <ion-item href="#">
+      <ion-icon slot="start" name="eye"></ion-icon>
+      <ion-label class="eye">Ojo</ion-label>
+    </ion-item>
+
+    <center>
+      <ion-button href="/card" class="card" color="success">Ir a Card
+        <ion-icon slot="end" name="rocket"></ion-icon>
+      </ion-button>
+    </center>
+
+  </ion-card>
+
+  <ion-button (click)="IngresoDatos()" expand="full" shape="round" color="tertiary">
+    Ingrese sus datos
+  </ion-button>  
+  <br>
+
+</ion-content>

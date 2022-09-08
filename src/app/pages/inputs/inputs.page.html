@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button (click)="mostrarMenu()">
+        <ion-icon slot="start" name="menu-outline" color="tertiary"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Inputs</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <form #formulario="ngForm" (ngSubmit)="onSubmit()">
+    <ion-item>
+    <ion-label>Nombre: </ion-label>
+    <ion-input type="text" placeholder="Digite Nombre..." name="nombre"
+               [(ngModel)]="usuario.nombre" required></ion-input>
+    </ion-item>
+<br>
+    <ion-item>
+      <ion-label>Correo Electrónico</ion-label>
+      <ion-input type="email" placeholder="Digite su email..." name="email"
+                 [(ngModel)]="usuario.email" required></ion-input>
+    </ion-item>
+<br>
+    <ion-item>
+      <ion-label>Contraseña</ion-label>
+      <ion-input type="password" placeholder="Digite su password..." name="password"
+                 [(ngModel)]="usuario.password" required></ion-input>
+    </ion-item>
+<br>
+    <ion-button [disabled]="formulario.invalid"
+                type="submit" expand="full" fill="outline" shape="round" routerLink="/inicio">
+      Enviar
+    </ion-button>
+
+  </form>
+  
+</ion-content>
